@@ -3,6 +3,6 @@ curl -s -o /dev/null -X PUT -d '{"on":true}' http://<hub IP>/api/<hub token>/gro
 
 # Example
 # turn lights from zone 1 on
-curl -s -o /dev/null -X PUT -d '{"on":true}' http://192.168.0.2/api/blablablabla/1/action
+curl -s -o /dev/null -X PUT -d '{"on":true}' http://192.168.0.2/api/blablablabla/groups/1/action
 # turn lights from zone 1 off
-curl -s -o /dev/null -X PUT -d '{"on":false}' http://192.168.0.2/api/blablablabla/1/action
+curl -s -o /dev/null -X PUT -d '{"on":false}' http://192.168.0.2/api/blablablabla/groups/1/action
