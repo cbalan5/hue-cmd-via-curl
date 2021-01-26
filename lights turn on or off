@@ -1,5 +1,5 @@
 #!/bin/bash
-curl -s -o /dev/null -X PUT -d '{"on":true}' http://<hub IP>/api/<hub token>/groups/<number that identifies the zone>/action
+curl -s -o /dev/null -X PUT -d '{"on":true}' http://<hub IP>/api/<bridge user>/groups/<number that identifies the zone>/action
 
 # Example
 # turn lights from zone 1 on
