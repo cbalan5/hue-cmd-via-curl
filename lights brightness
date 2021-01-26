@@ -1,0 +1,10 @@
+#!/bin/bash
+curl -s -o /dev/null -X PUT -d '{"bri": <number between 0 and 254>}' http://<hub IP>/api/<hub token>/groups/<number that identifies the zone>/action
+
+# Example
+# change brightness of lights from zone 1 to maximum
+curl -s -o /dev/null -X PUT -d '{"bri": 254}' http://192.168.0.2/api/blablablabla/groups/1/action
+# change brightness of lights from zone 1 to half
+curl -s -o /dev/null -X PUT -d '{"bri": 127}' http://192.168.0.2/api/blablablabla/groups/1/action
+# change brightness of lights from zone 1 to minimum
+curl -s -o /dev/null -X PUT -d '{"bri": 0}' http://192.168.0.2/api/blablablabla/groups/1/action
