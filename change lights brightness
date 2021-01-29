@@ -8,3 +8,7 @@ curl -s -o /dev/null -X PUT -d '{"bri": 254}' http://192.168.0.2/api/blablablabl
 curl -s -o /dev/null -X PUT -d '{"bri": 127}' http://192.168.0.2/api/blablablabla/groups/1/action
 # change brightness of lights from zone 1 to minimum
 curl -s -o /dev/null -X PUT -d '{"bri": 0}' http://192.168.0.2/api/blablablabla/groups/1/action
+
+# If you want different values of brightness, closer to %, make the math and multiply with 2.54 for bigger than 10% values and with 2.5 for smaller.
+# So, a value of 33% brightness would be 33*2.54=83.82, which must be rounded to 84 as API will not take in anything but integers. This would be:
+curl -s -o /dev/null -X PUT -d '{"bri": 84}' http://192.168.0.2/api/blablablabla/groups/1/action
